@@ -1,0 +1,68 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  background: #f9f9f9;
+}
+
+/* CSS Transitions & Animations  */
+.btn-hover {
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.1);
+  background: #2980b9;
+}
+
+/*  Box to Animate */
+.box {
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* Keyframes for animation */
+@keyframes slideAndFade {
+  0%   { transform: translateY(0); opacity: 1; }
+  50%  { transform: translateY(-50px); opacity: 0.5; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate {
+  animation: slideAndFade 1s ease-in-out;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from { transform: translateY(-200px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
